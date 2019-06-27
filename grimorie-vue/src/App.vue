@@ -8,7 +8,10 @@
       <div class="container">
         <div class="row">
           <materialize-grid gridTamanho="4">
-            <materialize-user-desc/>
+            <materialize-card>
+             <materialize-user-desc/>
+            </materialize-card>
+            
           </materialize-grid>
           <materialize-grid gridTamanho="8">
             <router-view/>
@@ -44,6 +47,7 @@ import MaterializeMenu from "@/components/MaterializeMenu.vue";
 import MaterializeFooter from "@/components/MaterializeFooter.vue";
 import MaterializeGrid from "@/components/MaterializeGrid.vue";
 import MaterializeUserDesc from "@/components/MaterializeUserDesc.vue";
+import materializeCard  from "@/components/MaterializeCard.vue";
 
 export default {
   name: "App",
@@ -51,7 +55,8 @@ export default {
     MaterializeMenu,
     MaterializeFooter,
     MaterializeGrid,
-    MaterializeUserDesc
+    MaterializeUserDesc,
+    materializeCard
   }
 };
 </script>
