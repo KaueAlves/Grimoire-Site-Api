@@ -3,13 +3,13 @@
     <materialize-grid gridTamanho="12" gridTamanhoL="3" aditionalClass="center-align">
       <img src="@/assets/HeadCoin.png" alt class=" responsive-img">
     </materialize-grid>
-    <materialize-grid gridTamanho="12" gridTamanhoL="9" aditionalClass="center-align">
+    <materialize-grid gridTamanho="12" gridTamanhoL="9">
       <div class="userInfo">
         <h2 class="black-text">{{userName}}</h2>
         <h3 class="black-text">{{userFunction}}</h3>
       </div>
     </materialize-grid>
-    <materialize-grid gridTamanho="12" aditionalClass="center-align">
+    <materialize-grid gridTamanho="12" >
       <p>{{userObjective}}</p>
       <p>{{userDescription}}</p>
     </materialize-grid>
