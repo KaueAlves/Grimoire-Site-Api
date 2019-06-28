@@ -1,10 +1,17 @@
 <template>
   <div>
-    <materialize-grid gridTamanho="2">
-      <img src="@/assets/logo.png" alt class="circle responsive-img">
+    <materialize-grid gridTamanho="12" gridTamanhoL="3" aditionalClass="center-align">
+      <img src="@/assets/HeadCoin.png" alt class=" responsive-img">
     </materialize-grid>
-    <materialize-grid gridTamanho="10">
-      <span class="black-text">Uma descrição simples de um usuário padrão.</span>
+    <materialize-grid gridTamanho="12" gridTamanhoL="9" aditionalClass="center-align">
+      <div class="userInfo">
+        <h2 class="black-text">{{userName}}</h2>
+        <h3 class="black-text">{{userFunction}}</h3>
+      </div>
+    </materialize-grid>
+    <materialize-grid gridTamanho="12" aditionalClass="center-align">
+      <p>{{userObjective}}</p>
+      <p>{{userDescription}}</p>
     </materialize-grid>
   </div>
 </template>
@@ -14,7 +21,7 @@ import MaterializeGrid from "@/components/MaterializeGrid";
 
 export default {
   name: "MaterializeUserDesc",
-  props: ["gridTamanho"],
+  props: ["userName","userFunction","userObjective","userDescription"],
   components: {
     MaterializeGrid
   },
@@ -26,4 +33,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  div.userInfo h2{
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  div.userInfo h3{
+    margin:0px;
+    font-size: 16px;
+  }
+  div.userInfo{
+    padding-top: 10px;
+  }
 </style>

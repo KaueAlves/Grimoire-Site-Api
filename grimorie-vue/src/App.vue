@@ -5,15 +5,19 @@
     </header>
 
     <main>
-      <div class="container">
+      <div class="">
         <div class="row">
-          <materialize-grid gridTamanho="4">
+          <materialize-grid gridTamanho="12" gridTamanhoL="4">
             <materialize-card>
-             <materialize-user-desc/>
+              <materialize-user-desc
+                userName="Kauê Nicoletti Alves"
+                userFunction="Desenvolvedor"
+                userObjective="Desenvolvendo um site com Laravel + Vue.js"
+                userDescription="Objetivo é adicionar cards os minhas conquistas, fazendo um emblema para cada."
+              />
             </materialize-card>
-            
           </materialize-grid>
-          <materialize-grid gridTamanho="8">
+          <materialize-grid gridTamanho="12" gridTamanhoL="8">
             <router-view/>
           </materialize-grid>
         </div>
@@ -21,8 +25,8 @@
     </main>
 
     <materialize-footer
-      footerLogo="AAAAA"
-      footerDesc="Testando vue.js"
+      footerLogo="Grimorie"
+      footerDesc="Desenvolvimento e teste de novas tecnologias"
       footerAno="2019"
       footerCor="blue"
     >
@@ -47,7 +51,7 @@ import MaterializeMenu from "@/components/MaterializeMenu.vue";
 import MaterializeFooter from "@/components/MaterializeFooter.vue";
 import MaterializeGrid from "@/components/MaterializeGrid.vue";
 import MaterializeUserDesc from "@/components/MaterializeUserDesc.vue";
-import materializeCard  from "@/components/MaterializeCard.vue";
+import materializeCard from "@/components/MaterializeCard.vue";
 
 export default {
   name: "App",
@@ -60,6 +64,6 @@ export default {
   }
 };
 </script>
-
 <style>
+
 </style>

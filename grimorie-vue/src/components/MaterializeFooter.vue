@@ -18,7 +18,7 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-        © {{footerAno}} Copyright
+        © {{footerAno}} Grimorie
         <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
       </div>
     </div>
@@ -37,4 +37,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  
 </style>
