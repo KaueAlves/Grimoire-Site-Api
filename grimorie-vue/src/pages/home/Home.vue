@@ -1,28 +1,22 @@
 <template>
-  <div class="">
-    <div class="row">
-      <div class="col s12 m6">
-        <div class="card blue-grey darken-1">
-          <div class="card-content white-text">
-            <span class="card-title">Card Title</span>
-            <p>
-              I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.
-            </p>
-          </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
-            <a href="#">This is a link</a>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="row">
+      <MaterializePostCard title="Titulo1" description="Primeira publicação" link="Ver Detalhes" icone=""></MaterializePostCard>
+      <!-- <MaterializePostCard title="Titulo2" description="Segunda publicação" link="Ver Detalhes"></MaterializePostCard>
+      <MaterializePostCard title="Titulo3" description="Terça publicação" link="Ver Detalhes"></MaterializePostCard>
+      <MaterializePostCard title="Titulo4" description="Quarta publicação" link="Ver Detalhes"></MaterializePostCard>
+      <MaterializePostCard title="Titulo5" description="Quinta publicação" link="Ver Detalhes"></MaterializePostCard>
+      <MaterializePostCard title="Titulo6" description="Sexta publicação" link="Ver Detalhes"></MaterializePostCard> -->
   </div>
 </template>
 
 <script>
+import MaterializePostCard from "@/components/MaterializePostCard";
+
 export default {
   name: "Home",
+  components:{
+    MaterializePostCard
+  },
   data() {
     return {
 };

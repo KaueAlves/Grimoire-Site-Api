@@ -1,15 +1,15 @@
 <template>
   <div>
-    <materialize-grid gridTamanho="12" gridTamanhoL="3" aditionalClass="center-align">
+    <materialize-grid gridTamanho="12" gridTamanhoL="3" aditionalClass="s-center-align l-left-align">
       <img src="@/assets/HeadCoin.png" alt class=" responsive-img">
     </materialize-grid>
-    <materialize-grid gridTamanho="12" gridTamanhoL="9" aditionalClass="center-align">
+    <materialize-grid gridTamanho="12" gridTamanhoL="9" aditionalClass="s-center-align l-left-align">
       <div class="userInfo">
         <h2 class="black-text">{{userName}}</h2>
         <h3 class="black-text">{{userFunction}}</h3>
       </div>
     </materialize-grid>
-    <materialize-grid gridTamanho="12" aditionalClass="center-align">
+    <materialize-grid gridTamanho="12" aditionalClass="s-center-align l-left-align">
       <p>{{userObjective}}</p>
       <p>{{userDescription}}</p>
     </materialize-grid>
@@ -21,7 +21,7 @@ import MaterializeGrid from "@/components/MaterializeGrid";
 
 export default {
   name: "MaterializeUserDesc",
-  props: ["userName","userFunction","userObjective","userDescription"],
+  props: ["userName","userFunction","userObjective","userDescription","userIcone"],
   components: {
     MaterializeGrid
   },

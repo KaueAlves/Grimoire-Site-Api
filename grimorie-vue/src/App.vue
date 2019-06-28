@@ -5,20 +5,25 @@
     </header>
 
     <main>
-      <div class="">
+      <div class>
         <div class="row">
           <materialize-grid gridTamanho="12" gridTamanhoL="4">
+
             <materialize-card>
               <materialize-user-desc
+                :userIcone="icone"
                 userName="Kauê Nicoletti Alves"
                 userFunction="Desenvolvedor"
                 userObjective="Desenvolvendo um site com Laravel + Vue.js"
                 userDescription="Objetivo é adicionar cards os minhas conquistas, fazendo um emblema para cada."
               />
             </materialize-card>
+
           </materialize-grid>
           <materialize-grid gridTamanho="12" gridTamanhoL="8">
+
             <router-view/>
+            
           </materialize-grid>
         </div>
       </div>
@@ -61,9 +66,13 @@ export default {
     MaterializeGrid,
     MaterializeUserDesc,
     materializeCard
+  },
+  data() {
+    return {
+      icone: "./static/assets/logo.png"
+    };
   }
 };
 </script>
 <style>
-
 </style>
