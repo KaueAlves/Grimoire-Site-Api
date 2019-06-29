@@ -1,9 +1,9 @@
 <template>
   <div class="row">
-      <MaterializePostCard title="Titulo1" description="Primeira publicação" link="Ver Detalhes" icone=""></MaterializePostCard>
-      <!-- <MaterializePostCard title="Titulo2" description="Segunda publicação" link="Ver Detalhes"></MaterializePostCard>
-      <MaterializePostCard title="Titulo3" description="Terça publicação" link="Ver Detalhes"></MaterializePostCard>
-      <MaterializePostCard title="Titulo4" description="Quarta publicação" link="Ver Detalhes"></MaterializePostCard>
+      <MaterializePostCard title="Preparar o Ambiente" description="Instalar VSCode, Composer, Npm, Git, Xamp, Vue.js, Materialize" link="Ver Detalhes" icone="logo.png"></MaterializePostCard>
+      <MaterializePostCard title="Basico de Vue.js" description="Entendendo Sistema De Rotas, Componentes, Propriedades, Metodos" link="Ver Detalhes" icone="HeadCoin.png"></MaterializePostCard>
+      <MaterializePostCard title="SRC Dinamico" description="Utilizando o require.context é possivel pegar os assets com url dinamica" link="Ver Detalhes" icone="logo.png"></MaterializePostCard>
+      <!-- <MaterializePostCard title="Titulo4" description="Quarta publicação" link="Ver Detalhes"></MaterializePostCard>
       <MaterializePostCard title="Titulo5" description="Quinta publicação" link="Ver Detalhes"></MaterializePostCard>
       <MaterializePostCard title="Titulo6" description="Sexta publicação" link="Ver Detalhes"></MaterializePostCard> -->
   </div>

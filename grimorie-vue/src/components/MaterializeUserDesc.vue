@@ -1,7 +1,7 @@
 <template>
   <div>
     <materialize-grid gridTamanho="12" gridTamanhoL="3" aditionalClass="s-center-align l-left-align">
-      <img src="@/assets/HeadCoin.png" alt class=" responsive-img">
+      <img :src="getAssets(userIcone)" alt class=" responsive-img">
     </materialize-grid>
     <materialize-grid gridTamanho="12" gridTamanhoL="9" aditionalClass="s-center-align l-left-align">
       <div class="userInfo">
@@ -22,6 +22,12 @@ import MaterializeGrid from "@/components/MaterializeGrid";
 export default {
   name: "MaterializeUserDesc",
   props: ["userName","userFunction","userObjective","userDescription","userIcone"],
+  methods: {
+    getAssets(source){
+      var image = require.context("../assets/",false);
+      return image('./'+source);
+    }
+  },
   components: {
     MaterializeGrid
   },

@@ -11,7 +11,7 @@
 
             <materialize-card>
               <materialize-user-desc
-                :userIcone="icone"
+                userIcone="HeadCoin.png"
                 userName="Kauê Nicoletti Alves"
                 userFunction="Desenvolvedor"
                 userObjective="Desenvolvendo um site com Laravel + Vue.js"
