@@ -1,31 +1,26 @@
 <template>
   <div id="app">
     <header>
-      <materialize-menu cor="blue" logo="GRIMORIE"/>
+      <materialize-menu cor="blue" logo="GRIMORIE" />
     </header>
 
     <main>
-      <div class>
-        <div class="row">
-          <materialize-grid gridTamanho="12" gridTamanhoL="4">
-
-            <materialize-card>
-              <materialize-user-desc
-                userIcone="HeadCoin.png"
-                userName="Kauê Nicoletti Alves"
-                userFunction="Desenvolvedor"
-                userObjective="Desenvolvendo um site com Laravel + Vue.js"
-                userDescription="Objetivo é adicionar cards os minhas conquistas, fazendo um emblema para cada."
-              />
-            </materialize-card>
-
-          </materialize-grid>
-          <materialize-grid gridTamanho="12" gridTamanhoL="8">
-
-            <router-view/>
-            
-          </materialize-grid>
-        </div>
+      <div class="row">
+        <materialize-grid gridTamanho="12" gridTamanhoL="4" aditionalClass="sidebar">
+          <MaterializeBasicCard aditionalClass="grey lighten-5 z-depth-1 ">
+            <materialize-user-desc
+              userIcone="HeadCoin.png"
+              userName="Kauê Nicoletti Alves"
+              userFunction="Desenvolvedor"
+              userObjective="Desenvolvendo um site com Laravel + Vue.js"
+              userDescription="Objetivo é adicionar cards os minhas conquistas, fazendo um emblema para cada."
+            />
+          </MaterializeBasicCard>
+          <span class="clear-both"></span>
+        </materialize-grid>
+        <materialize-grid gridTamanho="12" gridTamanhoL="8" aditionalClass="main-content">
+          <router-view />
+        </materialize-grid>
       </div>
     </main>
 
@@ -34,20 +29,7 @@
       footerDesc="Desenvolvimento e teste de novas tecnologias"
       footerAno="2019"
       footerCor="blue"
-    >
-      <li>
-        <a class="grey-text text-lighten-3" href="#!">Link 1</a>
-      </li>
-      <li>
-        <a class="grey-text text-lighten-3" href="#!">Link 2</a>
-      </li>
-      <li>
-        <a class="grey-text text-lighten-3" href="#!">Link 3</a>
-      </li>
-      <li>
-        <a class="grey-text text-lighten-3" href="#!">Link 4</a>
-      </li>
-    </materialize-footer>
+    />
   </div>
 </template>
 
@@ -56,7 +38,7 @@ import MaterializeMenu from "@/components/MaterializeMenu.vue";
 import MaterializeFooter from "@/components/MaterializeFooter.vue";
 import MaterializeGrid from "@/components/MaterializeGrid.vue";
 import MaterializeUserDesc from "@/components/MaterializeUserDesc.vue";
-import materializeCard from "@/components/MaterializeCard.vue";
+import MaterializeBasicCard from "@/components/MaterializeBasicCard.vue";
 
 export default {
   name: "App",
@@ -65,7 +47,7 @@ export default {
     MaterializeFooter,
     MaterializeGrid,
     MaterializeUserDesc,
-    materializeCard
+    MaterializeBasicCard
   },
   data() {
     return {
@@ -73,6 +55,7 @@ export default {
     };
   }
 };
+
 </script>
 <style>
 </style>
