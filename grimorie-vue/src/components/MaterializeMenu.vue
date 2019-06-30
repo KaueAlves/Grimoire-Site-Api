@@ -8,16 +8,16 @@
         </a>
         <ul class="right hide-on-med-and-down">
           <li>
-            <a href="sass.html">Sass</a>
+            <a href="sass.html">PHP</a>
           </li>
           <li>
-            <a href="badges.html">Components</a>
+            <a href="badges.html">C++</a>
           </li>
           <li>
-            <a href="collapsible.html">Javascript</a>
+            <a href="collapsible.html">C#</a>
           </li>
           <li>
-            <a href="mobile.html">Mobile</a>
+            <a href="mobile.html">JS</a>
           </li>
         </ul>
       </div>
@@ -25,16 +25,16 @@
 
     <ul class="sidenav" id="mobile-demo">
       <li>
-        <a href="sass.html">Sass</a>
+        <a href="sass.html">PHP</a>
       </li>
       <li>
-        <a href="badges.html">Components</a>
+        <a href="badges.html">C++</a>
       </li>
       <li>
-        <a href="collapsible.html">Javascript</a>
+        <a href="collapsible.html">C#</a>
       </li>
       <li>
-        <a href="mobile.html">Mobile</a>
+        <a href="mobile.html">JS</a>
       </li>
     </ul>
   </div>
@@ -43,9 +43,7 @@
 <script>
 export default {
   name: "MaterializeMenu",
-  props: [
-      'logo','url','cor'
-  ],
+  props: ["logo", "url", "cor"],
   data() {
     return {};
   }

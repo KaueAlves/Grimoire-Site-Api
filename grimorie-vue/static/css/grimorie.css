@@ -1,9 +1,73 @@
- main {
-    display: flex;
-    min-height: 75vh;
-    flex-direction: column;
+main {
+  display: flex;
+  min-height: 75vh;
+  flex-direction: column;
 }
 
 main {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.card span.card-title{
+  font-weight: 600;
+}
+
+.left-align {
+  text-align: left !important;
+}
+
+.right-align {
+  text-align: right !important;
+}
+
+.center-align {
+  text-align: center !important;
+}
+
+@media (min-width: 0px) {
+  .s-left-align {
+    text-align: left !important;
+  }
+  .s-right-align{
+    text-align: right !important;
+  }
+  .s-center-align{
+    text-align: center !important;
+  }
+}
+
+@media (min-width: 600px) {
+  .m-left-align {
+    text-align: left !important;
+  }
+  .m-right-align {
+    text-align: right !important;
+  }
+  .m-center-align {
+    text-align: center !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .l-left-align {
+    text-align: left !important;
+  }
+  .l-right-align {
+    text-align: right !important;
+  }
+  .l-center-align {
+    text-align: center !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .xl-left-align {
+    text-align: left !important;
+  }
+  .xl-right-align {
+    text-align: right !important;
+  }
+  .xl-center-align {
+    text-align: center !important;
+  }
 }

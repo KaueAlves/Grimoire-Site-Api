@@ -1,19 +1,17 @@
 <template>
-  <materialize-grid gridTamanho="12">
-    <div class="card-panel grey lighten-5 z-depth-1">
-      <div class="row valign-wrapper">
-        <slot></slot>
-      </div>
+  <div :class="'card-panel ' + aditionalClass">
+    <div class="row valign-wrapper">
+      <slot></slot>
     </div>
-  </materialize-grid>
+  </div>
 </template>
 
 <script>
 import MaterializeGrid from "@/components/MaterializeGrid";
 
 export default {
-  name: "MaterializeCard",
-  props: [],
+  name: "MaterializeBasicCard",
+  props: ["aditionalClass"],
   components: {
     MaterializeGrid
   },
@@ -25,7 +23,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    .row.valign-wrapper{
-        margin: 0px;
-    }
+.row.valign-wrapper {
+  margin: 0px;
+}
 </style>
