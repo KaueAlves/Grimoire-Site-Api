@@ -1,5 +1,9 @@
 <template>
   <div class="row">
+    
+    <!-- Input de Informação -->
+    
+
     <MaterializeGrid class="s" gridTamanho="12" >
       <MaterializeImageCard
         class="postCompleto"
@@ -47,13 +51,15 @@
 import MaterializePostCard from "@/components/MaterializePostCard";
 import MaterializeImageCard from "@/components/MaterializeImageCard";
 import MaterializeGrid from "@/components/MaterializeGrid";
+import MaterializePostInput from "@/components/MaterializePostInput";
 
 export default {
   name: "Home",
   components: {
     MaterializePostCard,
     MaterializeImageCard,
-    MaterializeGrid
+    MaterializeGrid,
+    MaterializePostInput
   },
   data() {
     return {};

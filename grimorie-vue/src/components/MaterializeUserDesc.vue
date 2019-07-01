@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <materialize-grid
+      gridTamanho="12">
     <materialize-grid
       gridTamanho="12"
       gridTamanhoL="3"
@@ -18,10 +19,10 @@
       </div>
     </materialize-grid>
     <materialize-grid gridTamanho="12" aditionalClass="s-center-align l-left-align">
-      <p>{{userObjective}}</p>
-      <p>{{userDescription}}</p>
+      <p>{{userObjective || "Objetivo" }}</p>
+      <p>{{userDescription || "Descrição"}}</p>
     </materialize-grid>
-  </div>
+  </materialize-grid>
 </template>
 
 <script>

@@ -1,8 +1,6 @@
 <template>
-  <div :class="'card-panel ' + aditionalClass">
-    <div class="row valign-wrapper">
-      <slot></slot>
-    </div>
+  <div class="row">
+
   </div>
 </template>
 
@@ -10,10 +8,9 @@
 import MaterializeGrid from "@/components/MaterializeGrid";
 
 export default {
-  name: "MaterializeBasicCard",
-  props: ["aditionalClass"],
+  name: "Login",
   components: {
-    MaterializeGrid
+    MaterializeGrid,
   },
   data() {
     return {};
@@ -23,5 +20,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 </style>

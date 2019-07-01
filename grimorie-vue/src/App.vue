@@ -6,9 +6,9 @@
 
     <main>
       <div class="row">
-        <materialize-grid gridTamanho="12" gridTamanhoL="4" aditionalClass="sidebar">
+        <MaterializeGrid gridTamanho="12" gridTamanhoL="4" aditionalClass="sidebar">
           <MaterializeBasicCard aditionalClass="grey lighten-5 z-depth-1 ">
-            <materialize-user-desc
+            <MaterializeUserDesc
               userIcone="HeadCoin.png"
               userName="Kauê Nicoletti Alves"
               userFunction="Desenvolvedor"
@@ -16,11 +16,13 @@
               userDescription="Objetivo é adicionar cards os minhas conquistas, fazendo um emblema para cada."
             />
           </MaterializeBasicCard>
-          <span class="clear-both"></span>
-        </materialize-grid>
-        <materialize-grid gridTamanho="12" gridTamanhoL="8" aditionalClass="main-content">
+          <MaterializeBasicCard aditionalClass="grey lighten-5 z-depth-1 ">
+            <MaterializePostInput />
+          </MaterializeBasicCard>
+        </MaterializeGrid>
+        <MaterializeGrid gridTamanho="12" gridTamanhoL="8" aditionalClass="main-content">
           <router-view />
-        </materialize-grid>
+        </MaterializeGrid>
       </div>
     </main>
 
@@ -39,6 +41,7 @@ import MaterializeFooter from "@/components/MaterializeFooter.vue";
 import MaterializeGrid from "@/components/MaterializeGrid.vue";
 import MaterializeUserDesc from "@/components/MaterializeUserDesc.vue";
 import MaterializeBasicCard from "@/components/MaterializeBasicCard.vue";
+import MaterializePostInput from "@/components/MaterializePostInput.vue";
 
 export default {
   name: "App",
@@ -47,7 +50,8 @@ export default {
     MaterializeFooter,
     MaterializeGrid,
     MaterializeUserDesc,
-    MaterializeBasicCard
+    MaterializeBasicCard,
+    MaterializePostInput
   },
   data() {
     return {
@@ -55,7 +59,6 @@ export default {
     };
   }
 };
-
 </script>
 <style>
 </style>
