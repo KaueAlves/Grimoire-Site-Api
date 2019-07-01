@@ -17,11 +17,7 @@
         <h3 class="black-text">{{userFunction|| 'fuction'}}</h3>
       </div>
     </materialize-grid>
-<<<<<<< HEAD
-    <materialize-grid gridTamanho="12" >
-=======
     <materialize-grid gridTamanho="12" aditionalClass="s-center-align l-left-align">
->>>>>>> b43627531602ded4921b1f532c005cfc27c4c766
       <p>{{userObjective}}</p>
       <p>{{userDescription}}</p>
     </materialize-grid>
