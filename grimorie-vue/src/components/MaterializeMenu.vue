@@ -7,41 +7,13 @@
           <i class="material-icons">menu</i>
         </a>
         <ul class="right hide-on-med-and-down">
-          <li>
-            <a href="php.html">PHP</a>
-          </li>
-          <li>
-            <a href="cpp.html">C++</a>
-          </li>
-          <li>
-            <a href="csharp.html">C#</a>
-          </li>
-          <li>
-            <a href="js.html">JS</a>
-          </li>
-          <li>
-            <a href="/#/login">Login</a>
-          </li>
+          <slot name="menu-desktop" />
         </ul>
       </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-      <li>
-        <a href="sass.html">PHP</a>
-      </li>
-      <li>
-        <a href="badges.html">C++</a>
-      </li>
-      <li>
-        <a href="collapsible.html">C#</a>
-      </li>
-      <li>
-        <a href="mobile.html">JS</a>
-      </li>
-      <li>
-        <a href="#/login">Login</a>
-      </li>
+      <slot name="menu-mobile" />
     </ul>
   </div>
 </template>
@@ -54,6 +26,9 @@ export default {
     return {};
   }
 };
+$(document).ready(function() {
+  $(".sidenav").sidenav();
+});
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

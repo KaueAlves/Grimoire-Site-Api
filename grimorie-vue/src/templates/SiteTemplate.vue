@@ -1,7 +1,42 @@
 <template>
   <div id="app">
     <header>
-      <materialize-menu cor="blue" logo="GRIMORIE" />
+      <materialize-menu cor="blue" logo="GRIMORIE">
+        <span slot="menu-desktop">
+          <li>
+            <a href="sass.html">PHP</a>
+          </li>
+          <li>
+            <a href="badges.html">C++</a>
+          </li>
+          <li>
+            <a href="collapsible.html">C#</a>
+          </li>
+          <li>
+            <a href="mobile.html">JS</a>
+          </li>
+          <li>
+            <a href="#/login">Login</a>
+          </li>
+        </span>
+        <span slot="menu-mobile">
+          <li>
+            <a href="sass.html">PHP</a>
+          </li>
+          <li>
+            <a href="badges.html">C++</a>
+          </li>
+          <li>
+            <a href="collapsible.html">C#</a>
+          </li>
+          <li>
+            <a href="mobile.html">JS</a>
+          </li>
+          <li>
+            <a href="#/login">Login</a>
+          </li>
+        </span>
+      </materialize-menu>
     </header>
 
     <main class="container">
@@ -60,6 +95,7 @@ export default {
     };
   }
 };
+
 </script>
 <style>
 </style>

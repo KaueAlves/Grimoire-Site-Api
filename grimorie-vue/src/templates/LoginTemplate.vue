@@ -1,18 +1,51 @@
 <template>
   <div id="app">
-    <header>
-      <materialize-menu cor="blue" logo="GRIMORIE" />
-    </header>
+    <materialize-menu cor="blue" logo="GRIMORIE">
+      <span slot="menu-desktop">
+        <li>
+          <a href="sass.html">PHP</a>
+        </li>
+        <li>
+          <a href="badges.html">C++</a>
+        </li>
+        <li>
+          <a href="collapsible.html">C#</a>
+        </li>
+        <li>
+          <a href="mobile.html">JS</a>
+        </li>
+        <li>
+          <a href="#/login">Login</a>
+        </li>
+      </span>
+      <span slot="menu-mobile">
+        <li>
+          <a href="sass.html">PHP</a>
+        </li>
+        <li>
+          <a href="badges.html">C++</a>
+        </li>
+        <li>
+          <a href="collapsible.html">C#</a>
+        </li>
+        <li>
+          <a href="mobile.html">JS</a>
+        </li>
+        <li>
+          <a href="#/login">Login</a>
+        </li>
+      </span>
+    </materialize-menu>
 
     <main class="container">
       <div class="row">
         <!-- Lado Esquerdo -->
         <MaterializeGrid gridTamanho="12" gridTamanhoXL="6" aditionalClass="sidebar">
-          <slot name="esquerda"/>
+          <slot name="esquerda" />
         </MaterializeGrid>
         <!-- Lado Direito -->
-        <MaterializeGrid gridTamanho="12"  gridTamanhoXL="6" aditionalClass="main-content">
-          <slot name="direita"/>
+        <MaterializeGrid gridTamanho="12" gridTamanhoXL="6" aditionalClass="main-content">
+          <slot name="direita" />
         </MaterializeGrid>
       </div>
     </main>
@@ -42,7 +75,7 @@ export default {
     MaterializeGrid,
     MaterializeUserDesc,
     MaterializeBasicCard,
-    MaterializePostInput,
+    MaterializePostInput
   },
   data() {
     return {};

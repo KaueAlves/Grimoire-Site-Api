@@ -8,9 +8,7 @@ main {
   flex: 1 0 auto;
 }
 
-.card span.card-title{
-  font-weight: 600;
-}
+
 
 .left-align {
   text-align: left !important;

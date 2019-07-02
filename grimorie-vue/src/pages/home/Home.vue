@@ -15,7 +15,7 @@
           />
         </MaterializeGrid>
 
-        <MaterializeGrid gridTamanho="12" gridTamanhoM="4">
+        <MaterializeGrid gridTamanho="12" gridTamanhoM="6">
           <MaterializePostCard
             title="Preparar Ambiente"
             description="Instalar VSCode, Composer, Npm, Git, Xamp, Vue.js, Materialize."
@@ -25,7 +25,7 @@
           />
         </MaterializeGrid>
 
-        <MaterializeGrid gridTamanho="12" gridTamanhoM="4">
+        <MaterializeGrid gridTamanho="12" gridTamanhoM="6">
           <MaterializePostCard
             title="Basico de Vue.js"
             description="Entendendo Sistema De Rotas, Componentes, Propriedades, Metodos."
@@ -35,7 +35,7 @@
           />
         </MaterializeGrid>
 
-        <MaterializeGrid gridTamanho="12" gridTamanhoM="4">
+        <MaterializeGrid gridTamanho="12" gridTamanhoM="6">
           <MaterializePostCard
             title="SRC Dinamico"
             description="Utilizando o require.context é possivel pegar os assets com url dinamica."
@@ -45,7 +45,7 @@
           />
         </MaterializeGrid>
 
-        <MaterializeGrid gridTamanho="12" gridTamanhoM="4">
+        <MaterializeGrid gridTamanho="12" gridTamanhoM="6">
           <MaterializePostCard
             title="Organiza com Slots"
             description="Organizei os templates e os componentes definindo nomes para os slots usados."
@@ -55,7 +55,7 @@
           />
         </MaterializeGrid>
 
-        <MaterializeGrid gridTamanho="12" gridTamanhoM="4">
+        <MaterializeGrid gridTamanho="12" gridTamanhoM="6">
           <MaterializePostCard
             title="Criar Templates"
             description="App.vue chama apenas a view, e os templates chamam os componentes."
@@ -65,7 +65,7 @@
           />
         </MaterializeGrid>
 
-        <MaterializeGrid gridTamanho="12" gridTamanhoM="4">
+        <MaterializeGrid gridTamanho="12" gridTamanhoM="6">
           <MaterializePostCard
             title="V-If V-Model"
             description="Atrele um elemento a uma variavel usando v-model, verifique o valor com v-if"
