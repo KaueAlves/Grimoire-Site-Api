@@ -16,7 +16,7 @@
             <a href="mobile.html">JS</a>
           </li>
           <li>
-            <a href="#/login">Login</a>
+            <a href="/login">Login</a>
           </li>
         </span>
         <span slot="menu-mobile">
@@ -33,7 +33,7 @@
             <a href="mobile.html">JS</a>
           </li>
           <li>
-            <a href="#/login">Login</a>
+            <a href="/login">Login</a>
           </li>
         </span>
       </materialize-menu>
@@ -90,9 +90,7 @@ export default {
     MaterializePostInput
   },
   data() {
-    return {
-      icone: "./static/assets/logo.png"
-    };
+    return {};
   }
 };
 

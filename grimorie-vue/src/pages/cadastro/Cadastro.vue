@@ -4,12 +4,14 @@
       <SidebarLeft />
     </span>
     <span slot="direita">
-      <h2>Login:</h2>
-
+      <h2>Cadastre-se:</h2>
+      <input type="text" name="username" id="username" placeholder="Usuário" />
       <input type="text" name="email" id="email" placeholder="Email" />
       <input type="text" name="password" id="password" placeholder="Senha" />
+      <input type="text" name="checkPassword" id="checkPassword" placeholder="Confirme a Senha" />
       <button type="submit" class="btn">Entrar</button>
-      <router-link to="/cadastro" class="btn orange">Cadastre-se</router-link>
+      <router-link to="/login" class="btn orange">Já tenho conta</router-link>
+      <!-- <button type="submit" class="btn">Esqueci</button> -->
     </span>
   </LoginTemplate>
 </template>
@@ -20,16 +22,14 @@ import MaterializeGrid from "@/components/MaterializeGrid";
 import SidebarLeft from "@/layout/SidebarLeft.vue";
 
 export default {
-  name: "Login",
+  name: "Cadastro",
   components: {
     MaterializeGrid,
     LoginTemplate,
     SidebarLeft
   },
   data() {
-    return {
-      cadastro: false
-    };
+    return {};
   }
 };
 </script>

@@ -15,7 +15,7 @@
           <a href="mobile.html">JS</a>
         </li>
         <li>
-          <a href="#/login">Login</a>
+          <a href="/login">Login</a>
         </li>
       </span>
       <span slot="menu-mobile">
@@ -32,7 +32,7 @@
           <a href="mobile.html">JS</a>
         </li>
         <li>
-          <a href="#/login">Login</a>
+          <a href="/login">Login</a>
         </li>
       </span>
     </materialize-menu>
@@ -40,11 +40,11 @@
     <main class="container">
       <div class="row">
         <!-- Lado Esquerdo -->
-        <MaterializeGrid gridTamanho="12" gridTamanhoXL="6" aditionalClass="sidebar">
+        <MaterializeGrid gridTamanho="12" gridTamanhoL="6" aditionalClass="sidebar">
           <slot name="esquerda" />
         </MaterializeGrid>
         <!-- Lado Direito -->
-        <MaterializeGrid gridTamanho="12" gridTamanhoXL="6" aditionalClass="main-content">
+        <MaterializeGrid gridTamanho="12" gridTamanhoL="6" aditionalClass="main-content">
           <slot name="direita" />
         </MaterializeGrid>
       </div>

@@ -26,9 +26,6 @@ export default {
     return {};
   }
 };
-$(document).ready(function() {
-  $(".sidenav").sidenav();
-});
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
