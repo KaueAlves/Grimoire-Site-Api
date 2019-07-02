@@ -8,13 +8,11 @@
       <div class="row">
         <!-- Lado Esquerdo -->
         <MaterializeGrid gridTamanho="12" gridTamanhoXL="6" aditionalClass="sidebar">
-          <slot name="esquerda" />
+          <slot name="esquerda"/>
         </MaterializeGrid>
         <!-- Lado Direito -->
-        <MaterializeGrid gridTamanho="12" gridTamanhoXL="6" aditionalClass="main-content">
-          <MaterializeBasicCard>
-            <slot name="direita" />
-          </MaterializeBasicCard>
+        <MaterializeGrid gridTamanho="12"  gridTamanhoXL="6" aditionalClass="main-content">
+          <slot name="direita"/>
         </MaterializeGrid>
       </div>
     </main>
@@ -44,7 +42,7 @@ export default {
     MaterializeGrid,
     MaterializeUserDesc,
     MaterializeBasicCard,
-    MaterializePostInput
+    MaterializePostInput,
   },
   data() {
     return {};

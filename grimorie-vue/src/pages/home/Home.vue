@@ -1,7 +1,7 @@
 <template>
   <SiteTemplate>
     <span slot="esquerda">
-      <SidebarLeft />
+      <SidebarLeft :home="home"/>
     </span>
     <span slot="direita">
       <div class="row">
@@ -68,7 +68,9 @@ export default {
     SidebarLeft
   },
   data() {
-    return {};
+    return {
+      home: true,
+    };
   }
 };
 </script>

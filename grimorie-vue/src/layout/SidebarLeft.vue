@@ -11,7 +11,7 @@
       />
     </MaterializeBasicCard>
     <!-- Input de Conquista -->
-    <MaterializeBasicCard aditionalClass="grey lighten-5 z-depth-1 ">
+    <MaterializeBasicCard v-if="home" aditionalClass="grey lighten-5 z-depth-1 ">
       <MaterializePostInput />
     </MaterializeBasicCard>
   </div>
@@ -24,6 +24,9 @@ import MaterializeUserDesc  from "@/components/MaterializeUserDesc"
 import MaterializeGrid from "@/components/MaterializeGrid"
 export default {
   name: "LayoutLadoEsquedo",
+  props:[
+    'home'
+  ],
   components: {
     MaterializeBasicCard,
     MaterializePostInput,
