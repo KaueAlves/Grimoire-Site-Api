@@ -7,12 +7,14 @@
     <main class="container">
       <div class="row">
         <!-- Lado Esquerdo -->
-        <MaterializeGrid gridTamanho="6" gridTamanhoXL="6" aditionalClass="sidebar">
-          <SidebarLeft/>
+        <MaterializeGrid gridTamanho="12" gridTamanhoXL="6" aditionalClass="sidebar">
+          <slot name="esquerda" />
         </MaterializeGrid>
         <!-- Lado Direito -->
-        <MaterializeGrid gridTamanho="6"  gridTamanhoXL="6" aditionalClass="main-content">
-          <slot />
+        <MaterializeGrid gridTamanho="12" gridTamanhoXL="6" aditionalClass="main-content">
+          <MaterializeBasicCard>
+            <slot name="direita" />
+          </MaterializeBasicCard>
         </MaterializeGrid>
       </div>
     </main>
@@ -33,7 +35,6 @@ import MaterializeGrid from "@/components/MaterializeGrid.vue";
 import MaterializeUserDesc from "@/components/MaterializeUserDesc.vue";
 import MaterializeBasicCard from "@/components/MaterializeBasicCard.vue";
 import MaterializePostInput from "@/components/MaterializePostInput.vue";
-import SidebarLeft from "@/layout/SidebarLeft.vue"
 
 export default {
   name: "LoginTemplate",
@@ -43,8 +44,7 @@ export default {
     MaterializeGrid,
     MaterializeUserDesc,
     MaterializeBasicCard,
-    MaterializePostInput,
-    SidebarLeft
+    MaterializePostInput
   },
   data() {
     return {};

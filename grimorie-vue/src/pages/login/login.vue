@@ -1,15 +1,22 @@
 <template>
   <LoginTemplate>
-    <div class="row">
-      <MaterializeGrid gridTamanho="12">
-        <h2>Login:</h2>
-        <input type="text" name="email" id="email" placeholder="Email">
-        <input type="text" name="password" id="password" placeholder="Senha">
-        <button type="submit" class="btn">Entrar</button>
-        <button type="submit" class="btn">Cadastrar-se</button>
-        <button type="submit" class="btn">Esqueci</button>
-      </MaterializeGrid>
-    </div>
+    <span slot="esquerda">
+      <SidebarLeft />
+    </span>
+    <span slot="direita">
+      <div class>
+        <MaterializeGrid gridTamanho="12">
+          <h2>Login:</h2>
+          <form action>
+            <input type="text" name="email" id="email" placeholder="Email" />
+            <input type="text" name="password" id="password" placeholder="Senha" />
+            <button type="submit" class="btn">Entrar</button>
+            <button type="submit" class="btn">Cadastrar-se</button>
+            <button type="submit" class="btn">Esqueci</button>
+          </form>
+        </MaterializeGrid>
+      </div>
+    </span>
   </LoginTemplate>
 </template>
 
@@ -20,6 +27,7 @@ import MaterializePostCard from "@/components/MaterializePostCard";
 import MaterializeImageCard from "@/components/MaterializeImageCard";
 import MaterializeGrid from "@/components/MaterializeGrid";
 import MaterializePostInput from "@/components/MaterializePostInput";
+import SidebarLeft from "@/layout/SidebarLeft.vue";
 
 export default {
   name: "Login",
@@ -29,7 +37,8 @@ export default {
     MaterializeGrid,
     MaterializePostInput,
     SiteTemplate,
-    LoginTemplate
+    LoginTemplate,
+    SidebarLeft
   },
   data() {
     return {};
