@@ -2,22 +2,25 @@
   <div>
     <nav :class="cor || red">
       <div class="nav-wrapper container">
-        <a href="#!" class="brand-logo">{{logo || "Site"}}</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+        <a href="/#/" class="brand-logo">{{logo || "Site"}}</a>
+        <a href="/#/" data-target="mobile-demo" class="sidenav-trigger">
           <i class="material-icons">menu</i>
         </a>
         <ul class="right hide-on-med-and-down">
           <li>
-            <a href="sass.html">PHP</a>
+            <a href="php.html">PHP</a>
           </li>
           <li>
-            <a href="badges.html">C++</a>
+            <a href="cpp.html">C++</a>
           </li>
           <li>
-            <a href="collapsible.html">C#</a>
+            <a href="csharp.html">C#</a>
           </li>
           <li>
-            <a href="mobile.html">JS</a>
+            <a href="js.html">JS</a>
+          </li>
+          <li>
+            <a href="/#/login">Login</a>
           </li>
         </ul>
       </div>
@@ -35,6 +38,9 @@
       </li>
       <li>
         <a href="mobile.html">JS</a>
+      </li>
+      <li>
+        <a href="#/login">Login</a>
       </li>
     </ul>
   </div>
