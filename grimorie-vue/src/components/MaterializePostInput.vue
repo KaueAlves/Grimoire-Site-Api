@@ -5,12 +5,12 @@
       <h2>Publique sua conquista:</h2>
       <form method="GET" action="#" class="row">
 
-        <MaterializeGrid gridTamanho="6">
+        <MaterializeGrid gridTamanho="12" gridTamanhoXL="6">
           <input v-model="post_title" placeholder="Qual sua conquista?" id="post_title" name="post_title" type="text" class="validate" />
           <label for="post_title">Titulo</label>
         </MaterializeGrid>
 
-        <MaterializeGrid gridTamanho="6">
+        <MaterializeGrid gridTamanho="12" gridTamanhoXL="6">
           <input v-model="post_image" placeholder="@/assets/HeadCoin.png" id="post_image" type="text" name="icone" class="validate" />
           <label for="post_image">Icone da Conquista (URL)</label>
         </MaterializeGrid>

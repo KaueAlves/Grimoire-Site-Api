@@ -22,6 +22,11 @@
 export default {
   name: "MaterializeMenu",
   props: ["logo", "url", "cor"],
+  mounted(){
+    $(document).ready(function() {
+      $(".sidenav").sidenav();
+    });
+  },
   data() {
     return {};
   }

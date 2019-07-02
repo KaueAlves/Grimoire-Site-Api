@@ -4,21 +4,21 @@
       <materialize-grid
         gridTamanho="12"
         gridTamanhoXL="4"
-        aditionalClass="s-center-align l-left-align"
+        aditionalClass="s-center-align xl-left-align"
       >
         <img :src="getAssets(userIcone) || ''" alt class="responsive-img" />
       </materialize-grid>
       <materialize-grid
         gridTamanho="12"
-        gridTamanhoL="8"
-        aditionalClass="s-center-align l-left-align"
+        gridTamanhoXL="8"
+        aditionalClass="s-center-align xl-left-align"
       >
         <div class="userInfo">
           <h2 class="black-text">{{userName|| 'username'}}</h2>
           <h3 class="black-text">{{userFunction|| 'fuction'}}</h3>
         </div>
       </materialize-grid>
-      <materialize-grid gridTamanho="12" aditionalClass="s-center-align l-left-align">
+      <materialize-grid gridTamanho="12" aditionalClass="s-center-align xl-left-align">
         <p>{{userObjective || "Objetivo" }}</p>
         <p>{{userDescription || "Descrição"}}</p>
       </materialize-grid>
