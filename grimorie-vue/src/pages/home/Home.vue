@@ -11,7 +11,7 @@
         />
       </MaterializeGrid>
 
-      <MaterializeGrid gridTamanho="12" gridTamanhoL="4">
+      <MaterializeGrid gridTamanho="12" gridTamanhoM="4">
         <MaterializePostCard
           title="Preparar o Ambiente"
           description="Instalar VSCode, Composer, Npm, Git, Xamp, Vue.js, Materialize"
@@ -21,7 +21,7 @@
         />
       </MaterializeGrid>
 
-      <MaterializeGrid gridTamanho="12" gridTamanhoL="4">
+      <MaterializeGrid gridTamanho="12" gridTamanhoM="4">
         <MaterializePostCard
           title="Basico de Vue.js"
           description="Entendendo Sistema De Rotas, Componentes, Propriedades, Metodos"
@@ -31,7 +31,7 @@
         />
       </MaterializeGrid>
 
-      <MaterializeGrid gridTamanho="12" gridTamanhoL="4">
+      <MaterializeGrid gridTamanho="12" gridTamanhoM="4">
         <MaterializePostCard
           title="SRC Dinamico"
           description="Utilizando o require.context é possivel pegar os assets com url dinamica"

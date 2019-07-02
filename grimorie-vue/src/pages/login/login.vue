@@ -1,14 +1,20 @@
 <template>
-  <SiteTemplate>
+  <LoginTemplate>
     <div class="row">
       <MaterializeGrid gridTamanho="12">
-        <h1>Login</h1>
+        <h2>Login:</h2>
+        <input type="text" name="email" id="email" placeholder="Email">
+        <input type="text" name="password" id="password" placeholder="Senha">
+        <button type="submit" class="btn">Entrar</button>
+        <button type="submit" class="btn">Cadastrar-se</button>
+        <button type="submit" class="btn">Esqueci</button>
       </MaterializeGrid>
     </div>
-  </SiteTemplate>
+  </LoginTemplate>
 </template>
 
 <script>
+import LoginTemplate from "@/templates/LoginTemplate";
 import SiteTemplate from "@/templates/SiteTemplate";
 import MaterializePostCard from "@/components/MaterializePostCard";
 import MaterializeImageCard from "@/components/MaterializeImageCard";
@@ -22,7 +28,8 @@ export default {
     MaterializeImageCard,
     MaterializeGrid,
     MaterializePostInput,
-    SiteTemplate
+    SiteTemplate,
+    LoginTemplate
   },
   data() {
     return {};

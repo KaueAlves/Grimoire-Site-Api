@@ -7,11 +7,11 @@
     <main class="container">
       <div class="row">
         <!-- Lado Esquerdo -->
-        <MaterializeGrid gridTamanho="12" gridTamanhoM="12" gridTamanhoXL="4" aditionalClass="sidebar">
+        <MaterializeGrid gridTamanho="6" gridTamanhoXL="6" aditionalClass="sidebar">
           <SidebarLeft/>
         </MaterializeGrid>
         <!-- Lado Direito -->
-        <MaterializeGrid gridTamanho="12" gridTamanhoM="12" gridTamanhoXL="8" aditionalClass="main-content">
+        <MaterializeGrid gridTamanho="6"  gridTamanhoXL="6" aditionalClass="main-content">
           <slot />
         </MaterializeGrid>
       </div>
@@ -36,7 +36,7 @@ import MaterializePostInput from "@/components/MaterializePostInput.vue";
 import SidebarLeft from "@/layout/SidebarLeft.vue"
 
 export default {
-  name: "SiteTemplate",
+  name: "LoginTemplate",
   components: {
     MaterializeMenu,
     MaterializeFooter,
@@ -47,9 +47,7 @@ export default {
     SidebarLeft
   },
   data() {
-    return {
-      icone: "./static/assets/logo.png"
-    };
+    return {};
   }
 };
 </script>

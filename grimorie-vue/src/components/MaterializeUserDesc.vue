@@ -1,28 +1,29 @@
 <template>
-  <materialize-grid
-      gridTamanho="12">
-    <materialize-grid
-      gridTamanho="12"
-      gridTamanhoL="3"
-      aditionalClass="s-center-align l-left-align"
-    >
-      <img :src="getAssets(userIcone) || ''" alt class="responsive-img" />
+  <div class="row">
+    <materialize-grid gridTamanho="12">
+      <materialize-grid
+        gridTamanho="12"
+        gridTamanhoXL="4"
+        aditionalClass="s-center-align l-left-align"
+      >
+        <img :src="getAssets(userIcone) || ''" alt class="responsive-img" />
+      </materialize-grid>
+      <materialize-grid
+        gridTamanho="12"
+        gridTamanhoL="8"
+        aditionalClass="s-center-align l-left-align"
+      >
+        <div class="userInfo">
+          <h2 class="black-text">{{userName|| 'username'}}</h2>
+          <h3 class="black-text">{{userFunction|| 'fuction'}}</h3>
+        </div>
+      </materialize-grid>
+      <materialize-grid gridTamanho="12" aditionalClass="s-center-align l-left-align">
+        <p>{{userObjective || "Objetivo" }}</p>
+        <p>{{userDescription || "Descrição"}}</p>
+      </materialize-grid>
     </materialize-grid>
-    <materialize-grid
-      gridTamanho="12"
-      gridTamanhoL="9"
-      aditionalClass="s-center-align l-left-align"
-    >
-      <div class="userInfo">
-        <h2 class="black-text">{{userName|| 'username'}}</h2>
-        <h3 class="black-text">{{userFunction|| 'fuction'}}</h3>
-      </div>
-    </materialize-grid>
-    <materialize-grid gridTamanho="12" aditionalClass="s-center-align l-left-align">
-      <p>{{userObjective || "Objetivo" }}</p>
-      <p>{{userDescription || "Descrição"}}</p>
-    </materialize-grid>
-  </materialize-grid>
+  </div>
 </template>
 
 <script>
