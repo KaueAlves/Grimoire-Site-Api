@@ -1,6 +1,7 @@
 <template>
   
     <MaterializeGrid gridTamanho="12">
+      
       <h2>Publique sua conquista:</h2>
       <form method="GET" action="#" class="row">
 
@@ -49,8 +50,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h2 {
-  font-size: 24px;
-  font-weight: 600;
-}
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  form.row{
+    margin-bottom: 0px;
+  }
 </style>
