@@ -15,62 +15,62 @@
           />
         </MaterializeGrid>
 
-        <MaterializeGrid gridTamanho="12" gridTamanhoM="6">
+        <MaterializeGrid gridTamanho="12" gridTamanhoM="4">
           <MaterializePostCard
             title="Preparar Ambiente"
             description="Instalar VSCode, Composer, Npm, Git, Xamp, Vue.js, Materialize."
             link="Ver Detalhes"
-            icone="logo.png"
+            icone="PremioCobre.png"
             aditionalClass="blue-grey darken-1"
           />
         </MaterializeGrid>
 
-        <MaterializeGrid gridTamanho="12" gridTamanhoM="6">
+        <MaterializeGrid gridTamanho="12" gridTamanhoM="4">
           <MaterializePostCard
             title="Basico de Vue.js"
             description="Entendendo Sistema De Rotas, Componentes, Propriedades, Metodos."
             link="Ver Detalhes"
-            icone="HeadCoin.png"
+            icone="PremioSilver.png"
             aditionalClass="blue-grey darken-1"
           />
         </MaterializeGrid>
 
-        <MaterializeGrid gridTamanho="12" gridTamanhoM="6">
+        <MaterializeGrid gridTamanho="12" gridTamanhoM="4">
           <MaterializePostCard
             title="SRC Dinamico"
             description="Utilizando o require.context é possivel pegar os assets com url dinamica."
             link="Ver Detalhes"
-            icone="logo.png"
+            icone="PremioSilver.png"
             aditionalClass="blue-grey darken-1"
           />
         </MaterializeGrid>
 
-        <MaterializeGrid gridTamanho="12" gridTamanhoM="6">
+        <MaterializeGrid gridTamanho="12" gridTamanhoM="4">
           <MaterializePostCard
             title="Organiza com Slots"
             description="Organizei os templates e os componentes definindo nomes para os slots usados."
             link="Ver Detalhes"
-            icone="logo.png"
+            icone="PremioGold.png"
             aditionalClass="blue-grey darken-1"
           />
         </MaterializeGrid>
 
-        <MaterializeGrid gridTamanho="12" gridTamanhoM="6">
+        <MaterializeGrid gridTamanho="12" gridTamanhoM="4">
           <MaterializePostCard
             title="Criar Templates"
             description="App.vue chama apenas a view, e os templates chamam os componentes."
             link="Ver Detalhes"
-            icone="logo.png"
+            icone="PremioSilver.png"
             aditionalClass="blue-grey darken-1"
           />
         </MaterializeGrid>
 
-        <MaterializeGrid gridTamanho="12" gridTamanhoM="6">
+        <MaterializeGrid gridTamanho="12" gridTamanhoM="4">
           <MaterializePostCard
             title="V-If V-Model"
             description="Atrele um elemento a uma variavel usando v-model, verifique o valor com v-if"
             link="Ver Detalhes"
-            icone="logo.png"
+            icone="PremioCobre.png"
             aditionalClass="blue-grey darken-1"
           />
         </MaterializeGrid>
