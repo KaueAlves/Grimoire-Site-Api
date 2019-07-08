@@ -18,9 +18,7 @@ use Illuminate\Http\Request;
 */
 
 
-Route::post('/teste', function (Request $request){
-    return $request->all();
-});
+Route::get('/teste','Auth\RegisterController@signup');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
