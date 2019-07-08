@@ -81,8 +81,11 @@ class RegisterController extends Controller
         {
             $data = $request->all();
             if($this->validator($data)){
-                return $this->create($data);
+                $user = $this->create($data);
+                $user->token = $user->createToken($user->email)->accessToken;
+                return $user;
             }
+            return false;
         }
     
 }
