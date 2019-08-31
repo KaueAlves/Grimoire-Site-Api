@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request; 
+use Illuminate\Contracts\Validation\Validator;
 
 class LoginController extends Controller
 {
@@ -36,4 +38,26 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    /**
+    * Get a validator for an incoming registration request.
+    *
+    * @param  array  $data
+    * @return \Illuminate\Contracts\Validation\Validator
+    */
+    protected function validator(array $data)
+    {
+        $validationCheck = Validator::make($data, [
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'password' => ['required', 'string'],
+        ]);
+    } 
+
+    public function singin(Request $request){
+        $data = $request->all();
+
+
+
+    }
+
 }
