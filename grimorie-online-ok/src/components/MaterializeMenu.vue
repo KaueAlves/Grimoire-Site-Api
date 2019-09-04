@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="navbar-fixed">
-      <nav :class="cor || red">
+      <nav :class="menuClass || red">
         <div class="nav-wrapper container">
           <a href="/#/" class="brand-logo">{{logo || "Site"}}</a>
           <a href="/#/" data-target="mobile-demo" class="sidenav-trigger">
@@ -23,12 +23,7 @@
 <script>
 export default {
   name: "MaterializeMenu",
-  props: ["logo", "url", "cor"],
-  mounted(){
-    $(document).ready(function() {
-      $(".sidenav").sidenav();
-    });
-  },
+  props: ["logo", "url", "menuClass"],
   data() {
     return {};
   }

@@ -1,19 +1,19 @@
 <template>
   <div id="app">
     <header>
-      <materialize-menu cor="blue" logo="GRIMORIE">
+      <materialize-menu menuClass="blue" logo="GRIMORIE">
         <span slot="menu-desktop">
           <li>
-            <a href="sass.html">PHP</a>
+            <a href="#">PHP</a>
           </li>
           <li>
-            <a href="badges.html">C++</a>
+            <a href="#">C++</a>
           </li>
           <li>
-            <a href="collapsible.html">C#</a>
+            <a href="#">C#</a>
           </li>
           <li>
-            <a href="mobile.html">JS</a>
+            <a href="#">JS</a>
           </li>
           <li>
             <a href="/login">Login</a>
@@ -21,16 +21,16 @@
         </span>
         <span slot="menu-mobile">
           <li>
-            <a href="sass.html">PHP</a>
+            <a href="#">PHP</a>
           </li>
           <li>
-            <a href="badges.html">C++</a>
+            <a href="#">C++</a>
           </li>
           <li>
-            <a href="collapsible.html">C#</a>
+            <a href="#">C#</a>
           </li>
           <li>
-            <a href="mobile.html">JS</a>
+            <a href="#">JS</a>
           </li>
           <li>
             <a href="/login">Login</a>
@@ -66,7 +66,7 @@
       footerLogo="Grimorie"
       footerDesc="Desenvolvimento e teste de novas tecnologias"
       footerAno="2019"
-      footerCor="blue"
+      footerClass="blue"
     />
     
   </div>
@@ -91,10 +91,10 @@ export default {
     MaterializePostInput
   },
   data() {
-    return {};
   }
 };
 
 </script>
-<style>
+<style lang="sass" scoped>
+
 </style>

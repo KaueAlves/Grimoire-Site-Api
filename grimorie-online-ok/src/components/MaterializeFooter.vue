@@ -1,5 +1,5 @@
 <template>
-  <footer class="page-footer" :class="footerCor">
+  <footer class="page-footer" :class="footerClass">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -37,7 +37,7 @@
 <script>
 export default {
   name: "MaterializeFooter",
-  props: ["footerLogo", "footerDesc", "footerAno", "footerCor"],
+  props: ["footerLogo", "footerDesc", "footerAno", "footerClass"],
   data() {
     return {};
   }

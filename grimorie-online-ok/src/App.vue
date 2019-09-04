@@ -4,6 +4,9 @@
 
 <script>
 export default {
+  mounted() {
+    M.AutoInit();
+  },
   name: 'App'
 }
 </script>

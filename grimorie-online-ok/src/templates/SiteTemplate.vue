@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <materialize-menu cor="blue" logo="GRIMORIE">
+      <materialize-menu menuClass="blue" logo="GRIMORIE">
         <span slot="menu-desktop">
           <li>
             <a href="sass.html">PHP</a>
@@ -66,7 +66,7 @@
       footerLogo="Grimorie"
       footerDesc="Desenvolvimento e teste de novas tecnologias"
       footerAno="2019"
-      footerCor="blue"
+      footerClass="blue"
     />
   </div>
 </template>
