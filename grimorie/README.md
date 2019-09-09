@@ -1,4 +1,4 @@
-# grimorie
+# grimorie-online
 
 ## Project setup
 ```
