@@ -100,3 +100,49 @@
     > Crtl+C 
     > php artisan serve
 
+# Criando rota de login, retornando dados do usuario + token
+
+    Crie uma rota para o login, pegue as informaçoes utilize o validator, crie um accessToken e retorne o usuario.
+    `
+        Route::post('/login',function(Request $request){
+            $data = $request->all();
+            $validator = Validator::make($data, [
+                'email' => ['required', 'string', 'email', 'max:255'],
+                'password' => ['required', 'string'],
+            ]);
+
+            if($validator->fails()){
+                return $validator->errors();
+            }
+
+            if(Auth::attempt([
+                'email' =>$data['email'],
+                'password' => $data['password']
+            ])){
+                $user = auth()->user(); // The auth function returns an authenticator instance. You may use it instead of the Auth facade for convenience:
+                $user->token = $user->createToken($user->email)->accessToken;
+                return $user;
+            }else{
+                return false;
+            }
+
+            return $request->all();
+
+        });
+    `
+
+# Entendendo Tokens
+
+    Managing Personal Access Tokens
+    Once you have created a personal access client, you may issue tokens for a given user using the createToken method on the User model instance.
+    The createToken method accepts the name of the token as its first argument and an optional array of scopes as its second argument:
+    `
+        $user = App\User::find(1);
+
+        // Creating a token without scopes...
+        $token = $user->createToken('Token Name')->accessToken;
+
+        // Creating a token with scopes...
+        $token = $user->createToken('My Token', ['place-orders'])->accessToken;
+    `
+# 
