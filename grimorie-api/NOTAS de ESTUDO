@@ -66,9 +66,37 @@
 
     Para testar usando o POSTMAN voce deve criar uma requisição do tipo GET, com `Authorization Type = Bearer Token`, e passar o Token gerado para o $user->token;
 
-#  
+# Utiizando validador do Laravel em suas Rotas
 
+    `
+        use Illuminate\Support\Facades\Validator; // Importa o validador
 
+        Route::post('/cadastro',function (Request $request){
+            $data = $request->all();
+            $validator = Validator::make($data, [
+                'name' => ['required', 'string', 'max:255'],
+                'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+                'password' => ['required', 'string', 'min:8', 'confirmed'],
+            ]); // Passa $data para o validador
 
+            if($validator->fails()){
+                return $validator->errors();
+            } // Retorna os erros
+        }
+    `
+    *validator - Confirmed = Necessita que seja enviado o campo + campo_confirmation, para passar na verificaçao.
+    Ex: password E password_confirmation
 
+# Instalando traduções
+
+    > composer require lucascudo/laravel-pt-br-localization
+    > php artisan vendor:publish --tag=laravel-pt-br-localization
+
+    Alterar o arquivo config\app.php
+        `
+            'locale' => 'pt-BR',
+        `
+    Pause o servidor e ligue denovo
+    > Crtl+C 
+    > php artisan serve
 
