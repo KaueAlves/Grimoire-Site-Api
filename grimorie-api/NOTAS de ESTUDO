@@ -1,0 +1,74 @@
+#Instalação do Laravel 5.8
+
+    > composer global require laravel/installer
+
+# Criando um Projeto
+
+    > laravel new blog
+
+# Iniciando o Projeto
+
+    > composer install
+    > npm install
+    > php artisan serve
+
+    Crie um arquivo chamado .env, com base no .env.example e mude as configurações para o seu banco de dados.
+    Execute o comando para instalar as tabelas basicas:
+
+    > php artisan migrate
+
+# Instale o Passport
+
+    > php artisan passport:install
+
+    Altera o arquivo App\User.php
+
+    `
+        <?php
+
+            namespace App;
+
+            use Illuminate\Foundation\Auth\User as Authenticatable;
+            use Illuminate\Notifications\Notifiable;
+            use Laravel\Passport\HasApiTokens;  // adicionar 
+
+            class User extends Authenticatable
+            {
+                use HasApiTokens, Notifiable; // adicionar 
+                ... resto do código ... 
+            }
+    
+    `
+
+# Crie uma rota de teste em routes\api.php
+
+    `
+        Route::post('/cadastro',function (Request $request){
+        
+            $user = User::create([
+                'name' => $request['name'],
+                'email' => $request['email'],
+                'password' => bcrypt($request['password']),
+            ]);
+            $user->token = $user->createToken($user->email)->accessToken; // É necessario para buscar as informaçoes do usuario
+
+            return $user;
+        });
+    `
+
+# Crie uma rota para pegar as informaçoes do usuario
+
+    `
+        Route::middleware('auth:api')->get('/user', function (Request $request) {
+            return $request->user();
+        });
+    `
+
+    Para testar usando o POSTMAN voce deve criar uma requisição do tipo GET, com `Authorization Type = Bearer Token`, e passar o Token gerado para o $user->token;
+
+#  
+
+
+
+
+
