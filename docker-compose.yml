@@ -1,0 +1,34 @@
+version: "3.7"
+services:
+#   db:
+#     image: mysql
+#     container_name: mysql-container
+#     command: --default-authentication-plugin=mysql_native_password
+#     environment:
+#       MYSQL_ROOT_PASSWORD: 12345
+
+  php-api:
+    image: php:zts-alpine3.9 
+    ports:
+      - "8000:8000"
+    working_dir: "/var/www/html"
+    command: "php artisan serve --host 0.0.0.0"
+    volumes:
+     - "./grimorie-api:/var/www/html"
+
+  vue:
+    build: 
+      context: .
+      dockerfile: vue.Dockerfile
+    container_name: vue-container
+    working_dir: "/usr/src"
+    command: bash -c "npm install && npm update && npm install @vue/cli && npm install sass-loader && npm run serve --host 0.0.0.0"
+    stdin_open: true
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    depends_on:
+      - php-api
+    volumes:
+      - "./grimorie:/usr/src"
+     

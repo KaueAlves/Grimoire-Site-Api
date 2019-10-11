@@ -3,7 +3,7 @@
     <div class="navbar-fixed">
       <nav :class="menuClass || red">
         <div class="nav-wrapper container">
-          <a href="/#/" class="brand-logo">{{logo || "Site"}}</a>
+          <router-link to="/#/">{{logo || "Site"}}</router-link>
           <a href="/#/" data-target="mobile-demo" class="sidenav-trigger">
             <i class="material-icons">menu</i>
           </a>

@@ -15,7 +15,7 @@
           <a href="mobile.html">JS</a>
         </li>
         <li>
-          <a href="/login">Login</a>
+          <router-link to="/login">Login</router-link>
         </li>
       </span>
       <span slot="menu-mobile">
@@ -32,7 +32,7 @@
           <a href="mobile.html">JS</a>
         </li>
         <li>
-          <a href="/login">Login</a>
+          <router-link to="/login">Login</router-link>
         </li>
       </span>
     </materialize-menu>
