@@ -21,7 +21,12 @@ services:
     ports:
       - "8000:8000"
     working_dir: "/var/www/html"
-    command: [sh, -c, "apk add bash && apk add php7-pdo_mysql && docker-php-ext-install mysqli pdo pdo_mysql && php artisan serve --host 0.0.0.0 && php artisan migrate"]
+    command: [sh, -c, "apk add bash && \
+     apk add php7-pdo_mysql && \
+     docker-php-ext-install mysqli pdo pdo_mysql && \
+     php artisan migrate && \
+     php artisan passport:install && \
+     php artisan serve --host 0.0.0.0"]
     volumes:
      - "./grimorie-api:/var/www/html"
     networks:
@@ -45,10 +50,7 @@ services:
     volumes:
       - "./grimorie:/usr/src"
     environment:
-      # https://cli.vuejs.org/guide/mode-and-env.html#modes
-      # development is used by vue-cli-service serve
       - NODE_ENV=development
-      # one way for hot reloading ... see above for details 
       - CHOKIDAR_USEPOLLING=true
       - CHOKIDAR_INTERVAL=100
       - YOUR_APP_WEB_HTTP_PORT=8080
