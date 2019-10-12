@@ -22,7 +22,7 @@ services:
       dockerfile: vue.Dockerfile
     container_name: vue-container
     working_dir: "/usr/src"
-    command: bash -c "npm install && npm update && npm install @vue/cli && npm install sass-loader && npm run serve --host 0.0.0.0"
+    command: bash -c "npm install && npm update && npm install @vue/cli && npm install sass-loader && npm run serve"
     stdin_open: true
     ports:
       - "8080:8080"
@@ -31,4 +31,11 @@ services:
       - php-api
     volumes:
       - "./grimorie:/usr/src"
-     
+    environment:
+      # https://cli.vuejs.org/guide/mode-and-env.html#modes
+      # development is used by vue-cli-service serve
+      - NODE_ENV=development
+      # one way for hot reloading ... see above for details 
+      - CHOKIDAR_USEPOLLING=true
+      - CHOKIDAR_INTERVAL=100
+      - YOUR_APP_WEB_HTTP_PORT=8080
