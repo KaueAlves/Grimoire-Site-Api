@@ -4,7 +4,7 @@
     <MaterializeBasicCard aditionalClass="grey lighten-5 z-depth-1 ">
       <MaterializeUserDesc
         userIcone="HeadCoin.png"
-        userName="Kauê Nicoletti Alves Doragon"
+        userName="Kauê Nicoletti Alves"
         userFunction="Desenvolvedor"
         userObjective="Desenvolvendo um site com Laravel + Vue.js"
         userDescription="Objetivo é adicionar cards os minhas conquistas, fazendo um emblema para cada."
