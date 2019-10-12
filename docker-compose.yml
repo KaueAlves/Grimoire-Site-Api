@@ -1,20 +1,33 @@
 version: "3.7"
 services:
-#   db:
-#     image: mysql
-#     container_name: mysql-container
-#     command: --default-authentication-plugin=mysql_native_password
-#     environment:
-#       MYSQL_ROOT_PASSWORD: 12345
+  db:
+    image: mysql
+    container_name: mysql-container
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always 
+    environment:
+      MYSQL_ROOT_PASSWORD: 321982
+      MYSQL_DATABASE: grimoriesite
+    ports:
+      - "3306:33060"
+      - "33060:3306"
+    networks:
+      - conn_all
+    volumes:
+     - "./mysql:/var/lib/mysql"
 
   php-api:
     image: php:zts-alpine3.9 
     ports:
       - "8000:8000"
     working_dir: "/var/www/html"
-    command: "php artisan serve --host 0.0.0.0"
+    command: [sh, -c, "apk add bash && apk add php7-pdo_mysql && docker-php-ext-install mysqli pdo pdo_mysql && php artisan serve --host 0.0.0.0 && php artisan migrate"]
     volumes:
      - "./grimorie-api:/var/www/html"
+    networks:
+      - conn_all
+    depends_on:
+      - db
 
   vue:
     build: 
@@ -39,3 +52,8 @@ services:
       - CHOKIDAR_USEPOLLING=true
       - CHOKIDAR_INTERVAL=100
       - YOUR_APP_WEB_HTTP_PORT=8080
+    networks:
+      - conn_all
+
+networks:
+  conn_all:
