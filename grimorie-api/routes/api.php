@@ -15,54 +15,63 @@ use App\User;
 |
 */
 
-Route::post('/cadastro',function (Request $request){
+Route::middleware(['cors'])->group(function(){
+    Route::post('/cadastro',function (Request $request){
 
-    $data = $request->all();
-    $validator = Validator::make($data, [
-        'name' => ['required', 'string', 'max:255'],
-        'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-        'password' => ['required', 'string', 'min:8', 'confirmed'],
-    ]);
-
-    if($validator->fails()){
-        return $validator->errors();
-    }
-
-    $user = User::create([
-        'name' => $request['name'],
-        'email' => $request['email'],
-        'password' => bcrypt($request['password']),
-    ]);
-    $user->token = $user->createToken($user->email)->accessToken;
-
-    return $user;
-});
-
-Route::post('/login',function(Request $request){
-    $data = $request->all();
-    $validator = Validator::make($data, [
-        'email' => ['required', 'string', 'email', 'max:255'],
-        'password' => ['required', 'string'],
-    ]);
-
-    if($validator->fails()){
-        return $validator->errors();
-    }
-
-    if(Auth::attempt([
-        'email' =>$data['email'],
-        'password' => $data['password']
-    ])){
-        $user = auth()->user();
+        $data = $request->all();
+        $validator = Validator::make($data, [
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+    
+        if($validator->fails()){
+            return $validator->errors();
+        }
+    
+        $user = User::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => bcrypt($request['password']),
+        ]);
         $user->token = $user->createToken($user->email)->accessToken;
+    
         return $user;
-    }else{
-        return ['status'=>"Usuário ou Senha Incorretos"];
-    }
+    });
+    
+    Route::post('/login',function(Request $request){
+        $data = $request->all();
+        $validator = Validator::make($data, [
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'password' => ['required', 'string'],
+        ]);
+    
+        if($validator->fails()){
+            return $validator->errors();
+        }
+    
+        if(Auth::attempt([
+            'email' =>$data['email'],
+            'password' => $data['password']
+        ])){
+            $user = auth()->user();
+            $user->token = $user->createToken($user->email)->accessToken;
+            return $user;
+        }else{
+            return ['status'=>"Usuário ou Senha Incorretos"];
+        }
+    
+        return $request->all();
+    
+    });
 
-    return $request->all();
 
+    Route::post('/teste',function (Request $request){
+        return $request->all();
+    });
+  
 });
+
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

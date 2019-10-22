@@ -1,28 +1,54 @@
 // Vue
-import Vue from "vue"
-import App from "./App.vue"
-import router from "./router"
-import store from "./store"
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+import axios from "axios";
+import VueAxios from "vue-axios";
 
 // Materialize
-import 'materialize-css/dist/css/materialize.css'
-import 'materialize-css/dist/js/materialize.js'
+import "materialize-css/dist/css/materialize.css";
+import "materialize-css/dist/js/materialize.js";
+import "./scss/app.scss";
 
 // Fontawsome
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { faUserSecret, faBorderAll, faSitemap, faTable, faFileAlt, faSearch, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faUserSecret,
+  faBorderAll,
+  faSitemap,
+  faTable,
+  faFileAlt,
+  faSearch,
+  faSignOutAlt
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-// Personalizado
-import "./scss/app.scss"
+// libraries
+library.add(
+  faUserSecret,
+  faBorderAll,
+  faTable,
+  faFileAlt,
+  faSitemap,
+  faSearch,
+  faSignOutAlt
+);
 
-library.add(faUserSecret, faBorderAll, faTable, faFileAlt, faSitemap, faSearch, faSignOutAlt);
-Vue.component('font-awesome-icon', FontAwesomeIcon);
+// Plugins
+Vue.use(VueAxios, axios);
 
-Vue.config.productionTip = false
+// Componentes
+Vue.component("font-awesome-icon", FontAwesomeIcon);
+
+// Configs
+Vue.config.productionTip = false;
+
+// Prototypes
+Vue.prototype.$apiURl = "http://localhost:8000";
 
 new Vue({
   router,
   store,
   render: h => h(App)
-}).$mount('#app')
+}).$mount("#app");

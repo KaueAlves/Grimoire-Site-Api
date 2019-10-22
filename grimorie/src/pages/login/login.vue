@@ -6,9 +6,15 @@
     <span slot="direita">
       <h2>Login:</h2>
 
-      <input type="text" name="email" id="email" placeholder="Email" />
-      <input type="text" name="password" id="password" placeholder="Senha" />
-      <button type="submit" class="btn">Entrar</button>
+      <input type="text" name="email" id="email" placeholder="Email" v-model="user.email" />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Senha"
+        v-model="user.password"
+      />
+      <button type="submit" v-on:click="login()" class="btn">Entrar</button>
       <router-link to="/cadastro" class="btn orange">Cadastre-se</router-link>
     </span>
   </LoginTemplate>
@@ -26,9 +32,31 @@ export default {
     LoginTemplate,
     SidebarLeft
   },
+  methods: {
+    login() {
+      console.log("Carregando Informações...");
+      this.axios
+        .post(this.$apiURl+"/api/teste",{
+          email: this.user.email,
+          password: this.user.password,
+        })
+        .then(response => {
+          console.log(response);
+          console.log("Carregamento completo.");
+        })
+        .catch(error => {
+          console.log(error);
+          console.log("Carregamento completo.");
+        });
+    }
+  },
   data() {
     return {
-      cadastro: false
+      cadastro: false,
+      user: {
+        email: "",
+        password: ""
+      }
     };
   }
 };
