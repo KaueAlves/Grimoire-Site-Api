@@ -45,7 +45,7 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.config.productionTip = false;
 
 // Prototypes
-Vue.prototype.$apiURl = "http://localhost:8000";
+Vue.prototype.$apiUrl = "http://localhost:8000";
 
 new Vue({
   router,

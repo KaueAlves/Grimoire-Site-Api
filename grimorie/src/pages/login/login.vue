@@ -36,18 +36,29 @@ export default {
     login() {
       console.log("Carregando Informações...");
       this.axios
-        .post(this.$apiURl+"/api/teste",{
+        .post(this.$apiUrl+"/api/login",{
           email: this.user.email,
           password: this.user.password,
         })
         .then(response => {
           console.log(response);
+          if(response.data.hasOwnProperty('user')){
+            // login com sucesso
+            console.log("sucesso");
+          }else if(response.data.status == false){
+            // login não existe
+            console.log('login não existe');
+          }else{
+            // erros na de validação
+            console.log('erros na de validação');
+          }
           console.log("Carregamento completo.");
         })
         .catch(error => {
           console.log(error);
           console.log("Carregamento completo.");
         });
+        
     }
   },
   data() {

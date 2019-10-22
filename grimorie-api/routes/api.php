@@ -22,6 +22,7 @@ Route::post('/cadastro',function (Request $request){
         'name' => ['required', 'string', 'max:255'],
         'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
         'password' => ['required', 'string', 'min:8', 'confirmed'],
+        'password_confirmation' => ['required', 'string', 'min:8', 'same:password']
     ]);
 
     if($validator->fails()){
@@ -55,9 +56,9 @@ Route::post('/login',function(Request $request){
     ])){
         $user = auth()->user();
         $user->token = $user->createToken($user->email)->accessToken;
-        return $user;
+        return ['status' => true, 'user' => $user];
     }else{
-        return ['status'=>"Usuário ou Senha Incorretos"];
+        return ['status'=>false, 'message'=>'Usuário ou Senha Incorretos'];
     }
 
     return $request->all();
