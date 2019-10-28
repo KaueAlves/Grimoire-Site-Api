@@ -2,37 +2,25 @@
   <div id="app">
     <materialize-menu menuClass="blue" logo="GRIMORIE">
       <span slot="menu-desktop">
-        <li>
-          <a href="sass.html">PHP</a>
+         <li v-if="user" >
+          <router-link to="/perfil">{{user.name}}</router-link>
         </li>
-        <li>
-          <a href="badges.html">C++</a>
-        </li>
-        <li>
-          <a href="collapsible.html">C#</a>
-        </li>
-        <li>
-          <a href="mobile.html">JS</a>
-        </li>
-        <li>
+        <li v-if="!user" >
           <router-link to="/login">Login</router-link>
+        </li>
+        <li v-if="user" >
+          <a v-on:click="logout()">Sair</a>
         </li>
       </span>
       <span slot="menu-mobile">
-        <li>
-          <a href="sass.html">PHP</a>
+        <li v-if="user" >
+          <router-link to="/perfil">{{user.name}}</router-link>
         </li>
-        <li>
-          <a href="badges.html">C++</a>
-        </li>
-        <li>
-          <a href="collapsible.html">C#</a>
-        </li>
-        <li>
-          <a href="mobile.html">JS</a>
-        </li>
-        <li>
+        <li v-if="!user" >
           <router-link to="/login">Login</router-link>
+        </li>
+        <li v-if="user" >
+          <a v-on:click="logout()">Sair</a>
         </li>
       </span>
     </materialize-menu>
@@ -77,8 +65,17 @@ export default {
     MaterializeBasicCard,
     MaterializePostInput
   },
+  created(){
+    let user = sessionStorage.getItem('user');
+    if(user){
+      this.user = JSON.parse(user);
+      this.$router.push("/");
+    }
+  },
   data() {
-    return {};
+    return {
+      user: false
+    };
   }
 };
 </script>

@@ -36,29 +36,36 @@ export default {
     login() {
       console.log("Carregando Informações...");
       this.axios
-        .post(this.$apiUrl+"/api/login",{
+        .post(this.$apiUrl + "/api/login", {
           email: this.user.email,
-          password: this.user.password,
+          password: this.user.password
         })
         .then(response => {
           console.log(response);
-          if(response.data.hasOwnProperty('user')){
-            // login com sucesso
+          if (response.data.hasOwnProperty("user")) {
+            sessionStorage.setItem('user',JSON.stringify(response.data.user));
+            this.$router.push("/");
             console.log("sucesso");
-          }else if(response.data.status == false){
+          } else if (response.data.status == false) {
             // login não existe
-            console.log('login não existe');
-          }else{
+            console.log("login não existe");
+            alert("Login Invalido!");
+          } else {
             // erros na de validação
-            console.log('erros na de validação');
+            let erros = "";
+            for (let erro of Object.values(response.data)) {
+              erros += erro + "\r\n";
+            }
+            alert(erros);
+            console.log("erros na de validação");
           }
           console.log("Carregamento completo.");
         })
         .catch(error => {
           console.log(error);
+          alert("Erro: Tente novamente mais tarde.")
           console.log("Carregamento completo.");
         });
-        
     }
   },
   data() {
