@@ -50,7 +50,14 @@ export default {
             console.log('login não existe');
           }else{
             // erros na de validação
-            console.log('erros na de validação');
+                        // erros na de validação
+            // erros na de validação
+            let erros = "";
+            for (let erro of Object.values(response.data)) {
+              erros += erro + "\r\n";
+            }
+            alert(erros);
+            console.log("erros na de validação");
           }
           console.log("Carregamento completo.");
         })
