@@ -45,11 +45,10 @@ export default {
           if (response.data.hasOwnProperty("user")) {
             sessionStorage.setItem('user',JSON.stringify(response.data.user));
             this.$router.push("/");
-            console.log("sucesso");
+            console.log("Login efetuado com Sucesso");
           } else if (response.data.status == false) {
             // login não existe
-            console.log("login não existe");
-            alert("Login Invalido!");
+            alert("Erro no Cadastro! Entre em contato ou tente novamente mais tarde.")
           } else {
             // erros na de validação
             let erros = "";

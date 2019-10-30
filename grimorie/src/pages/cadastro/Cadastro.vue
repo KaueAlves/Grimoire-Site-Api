@@ -30,6 +30,7 @@ export default {
   },
   methods: {
     cadastrar(){
+      console.log("Carregando Informações");
       this.axios
         .post(this.$apiUrl+"/api/cadastro",{
           name: this.user.name,
@@ -39,9 +40,11 @@ export default {
         })
         .then(response => {
           console.log(response);
-          if(response.data.token){
+          if(response.data.hasOwnProperty("user")){
             // login com sucesso
-            console.log("sucesso");
+            console.log("Cadastro efetuado com sucesso");
+            sessionStorage.setItem('user',JSON.stringify(response.data.user));
+            this.$router.push('/');
           }else if(response.data.status == false){
             // login não existe
             console.log('login não existe');

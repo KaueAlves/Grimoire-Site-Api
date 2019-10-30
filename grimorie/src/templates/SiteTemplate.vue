@@ -87,6 +87,7 @@ export default {
   methods:{
     logout(){
       sessionStorage.removeItem('user');
+      this.$router.push('/login');
       this.user = false;
     }
   },

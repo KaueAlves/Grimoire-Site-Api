@@ -36,7 +36,7 @@ Route::post('/cadastro',function (Request $request){
     ]);
     $user->token = $user->createToken($user->email)->accessToken;
 
-    return $user;
+    return ['status' => true, 'user' => $user];
 });
 
 Route::post('/login',function(Request $request){
