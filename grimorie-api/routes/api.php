@@ -73,3 +73,11 @@ Route::post('/teste', function (Request $request){
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::middleware('auth:api')->put('/perfil', function (Request $request) {
+
+    $user = $request->user();
+    $data = $request->all();
+
+    return ['status' => true, 'user' => $user, 'data' => $data];
+});
