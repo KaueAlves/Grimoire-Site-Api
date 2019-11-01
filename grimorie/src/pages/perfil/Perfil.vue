@@ -69,7 +69,6 @@ export default {
             // login com sucesso
             console.log("Atualização feita com Sucesso");
             sessionStorage.setItem("user", JSON.stringify(response.data.user));
-            this.$router.push("/");
           } else if (response.data.status == false) {
             // login não existe
             console.log("login não existe");

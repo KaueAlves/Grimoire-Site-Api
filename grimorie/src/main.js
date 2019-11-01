@@ -50,5 +50,8 @@ Vue.prototype.$apiUrl = "http://localhost:8000";
 new Vue({
   router,
   store,
+  mounted() {
+    M.AutoInit();
+  },
   render: h => h(App)
 }).$mount("#app");

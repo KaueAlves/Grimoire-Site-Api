@@ -65,6 +65,9 @@ export default {
     MaterializeBasicCard,
     MaterializePostInput
   },
+  mounted() {
+    M.AutoInit();
+  },
   created(){
     let user = sessionStorage.getItem('user');
     if(user){

@@ -2,28 +2,28 @@
   <div id="app">
     <header>
       <materialize-menu menuClass="blue" logo="GRIMORIE">
-      <span slot="menu-desktop">
-         <li v-if="user" >
-          <router-link to="/perfil">{{user.name}}</router-link>
-        </li>
-        <li v-if="!user" >
-          <router-link to="/login">Login</router-link>
-        </li>
-        <li v-if="user" >
-          <a v-on:click="logout()">Sair</a>
-        </li>
-      </span>
-      <span slot="menu-mobile">
-        <li v-if="user" >
-          <router-link to="/perfil">{{user.name}}</router-link>
-        </li>
-        <li v-if="!user" >
-          <router-link to="/login">Login</router-link>
-        </li>
-        <li v-if="user" >
-          <a v-on:click="logout()">Sair</a>
-        </li>
-      </span>
+        <span slot="menu-desktop">
+          <li v-if="user">
+            <router-link to="/perfil">{{user.name}}</router-link>
+          </li>
+          <li v-if="!user">
+            <router-link to="/login">Login</router-link>
+          </li>
+          <li v-if="user">
+            <a v-on:click="logout()">Sair</a>
+          </li>
+        </span>
+        <span slot="menu-mobile">
+          <li v-if="user">
+            <router-link to="/perfil">{{user.name}}</router-link>
+          </li>
+          <li v-if="!user">
+            <router-link to="/login">Login</router-link>
+          </li>
+          <li v-if="user">
+            <a v-on:click="logout()">Sair</a>
+          </li>
+        </span>
       </materialize-menu>
     </header>
 
@@ -77,17 +77,20 @@ export default {
     MaterializeBasicCard,
     MaterializePostInput
   },
-   created(){
-    let user = sessionStorage.getItem('user');
-    if(user){
+  mounted() {
+    M.AutoInit();
+  },
+  created() {
+    let user = sessionStorage.getItem("user");
+    if (user) {
       this.user = JSON.parse(user);
       console.log(this.user);
     }
   },
-  methods:{
-    logout(){
-      sessionStorage.removeItem('user');
-      this.$router.push('/login');
+  methods: {
+    logout() {
+      sessionStorage.removeItem("user");
+      this.$router.push("/login");
       this.user = false;
     }
   },
@@ -97,7 +100,6 @@ export default {
     };
   }
 };
-
 </script>
 <style>
 </style>
